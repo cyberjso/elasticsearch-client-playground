@@ -1,0 +1,25 @@
+{
+  "actions" : [
+    {
+      "add" : {
+        "index" : "person",
+        "alias" : "group-1",
+        "filter" : { "term" : { "companyId" : "1" } }
+      }
+    },
+    {
+      "add" : {
+        "index" : "person",
+        "alias" : "group-2",
+        "filter" : { "term" : { "companyId" : "2" } }
+      }
+    },
+    {
+      "add" : {
+        "index" : "person",
+        "alias" : "group-3",
+        "filter" : { "term" : { "companyId" : "3" } }
+      }
+    }
+  ]
+}

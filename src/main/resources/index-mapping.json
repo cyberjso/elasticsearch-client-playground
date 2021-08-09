@@ -3,7 +3,8 @@
     "properties": {
       "age":    { "type": "integer" },
       "email":  { "type": "keyword"  },
-      "name":   { "type": "text"  }
+      "name":   { "type": "text"  },
+      "company_id": {"type":  "integer"}
     }
   }
 }
