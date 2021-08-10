@@ -12,10 +12,15 @@ public class Main {
 
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+
+        EsHealthChecker esHealthChecker = context.getBean(EsHealthChecker.class);
+        System.out.println(esHealthChecker.isHealthy());
+
         EsDao esDao = context.getBean(EsDao.class);
 
         List<Integer> companies = Arrays.asList(1, 2, 3);
         List<Integer> ages =  Arrays.asList(20, 30, 40, 50, 70, 80, 90, 100);
+
 
         Random rand = new Random();
 

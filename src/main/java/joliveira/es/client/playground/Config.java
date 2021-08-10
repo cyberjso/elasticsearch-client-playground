@@ -1,5 +1,6 @@
 package joliveira.es.client.playground;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.HttpHost;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.sniff.Sniffer;
@@ -31,6 +32,11 @@ public class Config {
         return client;
     }
 
+    @Bean
+    public ObjectMapper mapper() {
+        return new ObjectMapper();
+    }
+
     @PreDestroy
     public void cleanUp() {
         try {
@@ -41,5 +47,6 @@ public class Config {
 
         }
     }
+
 
 }
